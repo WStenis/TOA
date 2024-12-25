@@ -1,6 +1,7 @@
 import pygame
 from states.main_menu import MainMenu
 from states.gameplay import Gameplay
+from states.create_character import CreateCharacter
 
 class Game:
     def __init__(self):
@@ -15,6 +16,7 @@ class Game:
 
         # States
         self.main_menu_state = MainMenu(self)
+        self.create_character_state = CreateCharacter(self)
         self.gameplay_state = Gameplay(self)
         self.current_state = self.main_menu_state
 
